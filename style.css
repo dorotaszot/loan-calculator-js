@@ -9,16 +9,25 @@ body {
   color: #fff;
 }
 
-.symbol-1 {
+.symbol-wrapper {
   background-color:#7395ae;
-  padding: 3px 6px;
+  width: 25px;
+  height: 25px;
   border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
 }
 
-.symbol-2 {
-  background-color:#7395ae;
-  padding: 3px 4px;
-  border-radius: 5px;
+.symbol {
+  position: absolute;
+  line-height: 25px;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
 }
 
 .main-wrapper {
@@ -46,13 +55,11 @@ input {
   width: 92%;
 }
 
-.input-wrapper {
-  width: 100%;
-}
+
 
 label {
   display: inline-block;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .btn {
@@ -73,26 +80,6 @@ label {
   text-align: center;
   margin-bottom: 20px;
 }
-
-/* h1::after {
-  content: '';
-  width: 200px;
-  position: absolute;
-  border-bottom: 1px solid #7395ae;
-  top: 12%;
-  left: 50%;
-  transform: translateX(-100px);
-} */
-
-/* h3::after {
-  content: '';
-  width: 200px;
-  position: absolute;
-  border-bottom: 1px solid #7395ae;
-  top: 34%;
-  left: 50%;
-  transform: translateX(-100px);
-} */
 
 #loading {
 display: none;
@@ -119,4 +106,10 @@ margin: 0 auto;
 
 input::placeholder {
   color: #bebebe
+}
+
+@media (max-width: 400px) {
+  .main-wrapper {
+    width: 100%;
+  }
 }
